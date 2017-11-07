@@ -5,7 +5,7 @@ install-mongo:
       - mongodb-clients
 /etc/mongodb.conf:
   file.managed:
-    - source: salt://mongodb-service/conf/mongod.conf
+    - source: salt://mongodb-service/conf/mongodb.conf
     - template: jinja
     - user: vagrant # TODO: change before production
     - group: vagrant

@@ -8,7 +8,7 @@
   file.directory:
     - makedirs: True
     - user: {{ pillar['salt-admin-user'] }}
-    - group: {{ pillar['salt-admin-group'] }}ss
+    - group: {{ pillar['salt-admin-group'] }}
 
 GOPATH:
   file.append:
