@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
         masternode.vm.host_name = 'saltmaster-res1.local'
         masternode.vm.synced_folder "./saltstack/salt", "/srv/salt", type: "nfs"
         masternode.vm.synced_folder "./saltstack/pillar", "/srv/pillar", type: "nfs"
-        masternode.vm.synced_folder "../mnt", "/home/vagrant/mnt", type: "nfs" #for other syncronized files like www data
+        masternode.vm.synced_folder "../mnt", "/home/vagrant/mnt", type: "nfs" #for other synchronized files like www data
         masternode.vm.network "private_network", ip: "192.168.56.121"
         masternode.vm.provider "virtualbox" do |v|
             v.memory = 2048

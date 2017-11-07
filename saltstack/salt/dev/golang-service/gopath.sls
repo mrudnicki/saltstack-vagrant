@@ -1,10 +1,10 @@
-/home/{{ pillar['salt-admin-user'] }}/salt_go/src:
+/home/{{ pillar['salt-admin-user'] }}/mnt/salt_go/src:
   file.directory:
     - makedirs: True
     - user: {{ pillar['salt-admin-user'] }}
     - group: {{ pillar['salt-admin-group'] }}
 
-/home/{{ pillar['salt-admin-user'] }}/salt_go/main:
+/home/{{ pillar['salt-admin-user'] }}/mnt/salt_go/main:
   file.directory:
     - makedirs: True
     - user: {{ pillar['salt-admin-user'] }}
@@ -13,4 +13,4 @@
 GOPATH:
   file.append:
     - name: /home/{{ pillar['salt-admin-user'] }}/.profile
-    - text: export GOPATH=/home/{{ pillar['salt-admin-user'] }}/salt_go
+    - text: export GOPATH=/home/{{ pillar['salt-admin-user'] }}/mnt/salt_go
